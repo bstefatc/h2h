@@ -1,0 +1,19 @@
+
+entity ComparisonHolding {
+	name String,
+    holdings String
+}
+
+// Set pagination options
+paginate ComparisonHolding with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+dto * with mapstruct
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
