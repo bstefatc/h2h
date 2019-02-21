@@ -1,0 +1,6 @@
+version: '2'
+services:
+    h2h-hazelcast-management-center:
+        image: hazelcast/management-center:3.9.3
+        ports:
+            - 8180:8080

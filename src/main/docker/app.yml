@@ -1,0 +1,15 @@
+version: '2'
+services:
+    h2h-app:
+        image: h2h
+        environment:
+            - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:sqlserver://h2h-mssql:1433;database=H2H
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    h2h-mssql:
+        extends:
+            file: mssql.yml
+            service: h2h-mssql
